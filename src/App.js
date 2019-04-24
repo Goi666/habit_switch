@@ -1,23 +1,25 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Timer from './timer.js';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div>
+          <div className="timer">
+            <Timer
+              hours={'00'}
+              minnutes={'00'}
+              seconds={'00'}
+            />
+          </div>
+          <div className="counter">
+            <input type="button" value="スタート" class="Counter-Button"></input>
+          </div>
+        </div>
       </header>
     </div>
   );
